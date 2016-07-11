@@ -1,34 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='calculatorApp'>
   <head>
     <meta charset="utf-8">
-    <title>VanillaCalc</title>
+    <title>Vanilla Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+
+
+
+
+    <!-- <script src="app.js"></script> -->
   </head>
-  <body>
+  <body ng-controller="MainController">
     <div class="calculator">
-      <div class="output">0</div>
-      <div class="button">C</div>
-      <div class="button">±</div>
-      <div class="button">%</div>
-      <div class="button accent">÷</div>
-      <div class="button">7</div>
-      <div class="button">8</div>
-      <div class="button">9</div>
-      <div class="button accent">×</div>
-      <div class="button">4</div>
-      <div class="button">5</div>
-      <div class="button">6</div>
-      <div class="button accent">−</div>
-      <div class="button">1</div>
-      <div class="button">2</div>
-      <div class="button">3</div>
-      <div class="button accent">+</div>
-      <div class="button double">0</div>
-      <div class="button">.</div>
-      <div class="button submit">=</div>
+      <div class="output"> {{numAnswer}} </div>
+      <div class="button" id="clear" ng-click="handleClear()">{{clear}}</div>
+      <div class="button"></div>
+      <div class="button"></div>
+      <div class="button accent" ng-click="handleDivide()">{{divide}}</div>
+      <div class="button" ng-click="handleSeven()"> {{seven}} </div>
+      <div class="button" ng-click="handleEight()"> {{eight}} </div>
+      <div class="button" ng-click="handleNine()"> {{nine}} </div>
+      <div class="button" ng-click="handleMultiply()">{{multiply}}</div>
+      <div class="button" ng-click="handleFour()"> {{four}} </div>
+      <div class="button" ng-click="handleFive()"> {{five}} </div>
+      <div class="button" ng-click="handleSix()"> {{six}} </div>
+      <div class="button" ng-click="handleMinus()">{{minus}}</div>
+      <div class="button" ng-click="handleOne()"> {{one}} </div>
+      <div class="button" ng-click="handleTwo()"> {{two}} </div>
+      <div class="button" ng-click="handleThree()"> {{three}} </div>
+      <div class="button" ng-click="handlePlus()">{{plus}}</div>
+      <div class="button"></div>
+      <div class="button" ng-click="handleZero()"> {{zero}} </div>
+      <div class="button" ng-Click="handleDot()">{{dot}}</div>
+      <div class="button" ng-click="handleEquals()">{{equals}}</div>
     </div>
-    <script src="calculator.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="client.js"</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
   </body>
 </html>
